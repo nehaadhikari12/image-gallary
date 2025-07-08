@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="filter-buttons ">
+        <button onclick="filterImages('All')">All</button>
+        <button onclick="filterImages('Travel')">Travel</button>
+        <button onclick="filterImages('Village')">Village</button>
+        <button onclick="filterImages('Food')">Food</button>
+    </div>
+    <div class="gallary">
+        <img src="1.jpg" alt=" travel image" data-category="Travel" >
+        <img src="6.jpg" alt="travel image 2" data-category="Travel" >
+        <img src="2.jpg" alt=" village image" data-category="Village" >
+        <img src="3.jpg" alt="village image 2" data-category="Village" >
+        <img src="4.jpg" alt="food image" data-category="Food" >
+        <img src="5.jpg" alt="food image 2" data-category="Food" >
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closelightbox()">X</span>
+        <img class="lightbox-img" id="lightbox-img"/>
+         <div class="nav">
+            <span class="prev" onclick="changeImage(-1)"></span>
+            <span class="next" onclick="changeImage(1)"></span>
+     </div>
+     </div>
+     <script src="script.js" ></script>
+</body>
+</html>

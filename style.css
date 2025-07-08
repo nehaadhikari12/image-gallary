@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(227, 170, 150);
+}
+.filter-buttons{
+    text-align: center;
+    padding: 15px;
+}
+.filter-buttons button{
+    margin: 0 10px;
+    padding: 10px 20px;
+    background: firebrick;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s ease;
+}
+.filter-buttons button:hover{
+    background: burlywood;
+}
+.gallary{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.gallary img{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s,filter 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+
+}
+.gallary img:hover{
+    transform: scale(1.05);
+    filter: brightness(0.8);
+    border: 2px solid firebrick;
+
+}
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,0,0);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+.lightbox-img{
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 5px;
+    object-fit: contain;
+}
+.lightbox.show{
+    display: flex;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: bisque;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+    z-index: 10000;
+
+}
+.nav{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    transform:translateY(-50%) ;
+    align-items: center;
+}
+.prev,.next {
+    color: aliceblue;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+}
+.prev:hover, .next:hover {
+    color: beige;
+}
+@media(max-width:600px) {
+    .gallary{
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    }
+}
+.prev, .next{
+    font-size: 30px;
+}
