@@ -1,2 +1,2 @@
 # image-gallary
-A simple image gallary using html,css and javascript.
+Responsive image gallery built with HTML, CSS & JavaScript — supports thumbnails, lightbox view, and mobile-friendly layout.
